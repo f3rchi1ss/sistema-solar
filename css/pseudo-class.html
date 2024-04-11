@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width, intial-scale=1.0">
+	<meta http-equiv="X-UA-Compatile" content="ie=edge">
+    <title>Ejemplos de Pseudo-clases</title>
+    <style>
+    	/*Pseudo-clases orientadas enlaces */
+    	a:link{
+    		color: green;
+    	}
+    	a:visited{
+    		color: red;
+    	}
+    	a:hover{
+    		font-size: 18px
+    	}
+    	a:active{
+    		color: black;
+    	}
+    	/* Pseuod-clases orientdas a cualquier elemento*/
+    	button:hover{
+    		color: red;
+    	}
+    	button:active{
+    		color: blue;
+    	}
+    	/* Pseudo-clases orientadas a formularios */
+    	input:enabled{
+    		background-color: lightyellow;
+    	}
+    	input:focus{
+    		background-color: yellow;
+    	}
+    	input:disabled{
+    		background-color: darkgrey;
+    		cursor: not-allowed; 
+    	}
+    	input[type="email"]:invalid{
+    		border: 3px solid red  
+    	}
+    	input[type="radio"]:checked + label{
+    		background-color: blue 
+    		color: white;
+    	}
+    	input[type="checkbox"]:checked + label{
+    		color: red
+    	}
+    	/* Pseudo-clases según la posicion o numero de un elemento */
+    	div#posicionElemento p:first-child{
+    		color: darkred
+    	}
+    	div#posicionElemento p:nth-child(2){
+    		color: darkblue
+    	}
+    	div#posicionElemento p:nth-child(3){
+    		color: darkorange
+        }
+    	div#posicionElemento p:last-child {
+    		color: darkgreen
+    	}
+    	ul li:nth-child(even){
+    		color: green
+    	}
+    	ul li:nth-child(odd) {
+    		color: blue 
+    	}
+    </style>
+</head>
+<body>
+   <h1>Pseudo-clases CSS</h1>
+   <h2>Pseudo-clases orientadas a enlaces</h2>
+   <a href="#">Esto es un enlace</a>
+   <br><br>
+   <button>Pulsa aqui</button>
+
+   <h2>Pseudo-clases orientadas formularios</h2>
+   <form action="">
+   	   <label for="suNombre">Nombre:</label>
+   	   <input type="text" id="suNomer" size="50"><br><br>
+
+   	   <label for="suApellido">Apellido:</label>
+   	   <input type="text" id="suNombre" size="50" disabled><br><br>
+
+   	   <label for="suEmail">Email:</label>
+   	   <input type="email" id="suNombre" size="50"><br><br>
+
+   	   Genero: <br><br>
+   	   <input type="radio" name="genero" id="hombre" value="masculino">
+   	   <label for="hombre">Masculino</label>
+
+   	   <input type="radio" name="genero" id="mujer" value="femenino">
+   	   <label for="mujer">Femenino</label> <br><br>
+
+   	   Pasatiempo: <br>
+   	   <input type="checkbox" name="pasatiempo1" id="hiking" value="excursionismo">
+   	   <label for="hiking">Excursionismo</label>
+
+   	   <input type="checkbox" name="pasatiempo2" id="swimming" value="natacion">
+   	   <label for="swimming">Natacion</label>
+   </form>
+
+   <h2>Pseudo-clases basadas en la posicion / numero de los elementos</h2>
+    <div id="posicionElemento">
+    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
+    	
+    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    	
+    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    	
+    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <ul>
+    	<li>Manzanas</li>
+    	<li>Uvas</li>
+    	<li>Peras</li>
+    	<li>Fresas</li>
+    	<li>Moras</li>
+    </ul>
+</body>
+</html>
